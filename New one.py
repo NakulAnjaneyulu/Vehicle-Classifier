@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import models, layers
 from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
-from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.models import Sequential,load_model
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
 # Define constants
@@ -11,11 +11,11 @@ IMAGE_SIZE = (150, 150)
 BATCH_SIZE = 32
 NUM_CLASSES = 2
 EPOCHS = 10
-categories = ["Car", "Bike"]  # Category names
+categories = ["Bikes", "Cars"]  # Category names
 
 # Set paths to data folders
-train_dir = 'C:/Project/D/Dataset/Train'  # Adjust these paths according to your dataset location
-test_dir = 'C:/Project/D/Dataset/Test'
+train_dir = 'C:\Project\cars and bikes classifier\Dataset\Train'  # Adjust these paths according to your dataset location
+test_dir = 'C:\Project\cars and bikes classifier\Dataset\Test'
 
 # Preprocess the images using ImageDataGenerator
 train_datagen = ImageDataGenerator(rescale=1./255)
@@ -91,5 +91,5 @@ def predict_image(image_path):
 
 # Example usage
 # Replace 'path_to_your_image.jpg' with the actual path to your image
-image_path = "C:/Project/D/Dataset/Test/Cars/56.jpg"  # Replace with your image path
+image_path = "C:\Project\cars and bikes classifier\Dataset\Test\Cars\df.jpg"  # Replace with your image path
 predict_image(image_path)
